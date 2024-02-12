@@ -15,6 +15,12 @@ async function draw() {
         await sleep(1000)
         console.log("awaiting imports from python")
     }
+    console.log(imported.length)
     console.log(imported)
+    imported = imported.replaceAll("'",'"')
+    imported = JSON.parse(imported)
+    imported = [imported]
+    console.log(imported)
+    console.log(imported[0][0].name)
 }
 draw()
