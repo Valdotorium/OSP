@@ -1,15 +1,8 @@
 from pyscript import document
 import js
-
-
-myObject = {
-    "name": "Harold",
-    "age": 25
-}
-
-
-toJS = []
-toJS.append(myObject)
+import json
+planet = open("/planet.json")
+toJS = json.lod(planet)
 print(toJS)
 txt = document.querySelector("#python")
 txt.innerText = toJS

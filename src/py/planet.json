@@ -1,0 +1,13 @@
+{
+    "name": "Sun",
+    "radius": "140000000",
+    "isGreatAttractor": true,
+    "Appearance": {
+        "color": "red",
+        "material": "metal"
+    },
+    "GravitationalParameters": {
+        "mass": "720000000000000000000000000000",
+        "density": "2"
+    }
+}

@@ -4,6 +4,17 @@ canvas.moveTo(0, 0)
 canvas.lineTo(100, 100)
 canvas.stroke()
 let running = true
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function draw() {
+    imported = document.getElementById("python").innerText
+    while (imported.length < 1){
+        imported = document.getElementById("python").innerText
 
-var imported = document.getElementById("python").innerText
-console.log(imported)
+        await sleep(1000)
+        console.log("awaiting imports from python")
+    }
+    console.log(imported)
+}
+draw()
